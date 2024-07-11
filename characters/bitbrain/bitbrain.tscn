@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6ho82uwx48vl"]
+
+[ext_resource type="Texture2D" uid="uid://g7oh3fo3bl5y" path="res://characters/bitbrain/bitbrain.png" id="1_pjucq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8h1lb"]
+radius = 5.0
+height = 14.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+z_index = 2
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_pjucq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8h1lb")

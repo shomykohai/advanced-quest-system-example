@@ -1,0 +1,65 @@
+~ start
+
+Nathan: Hi Coco.
+if is_quest_active(PandoraQuests.HELP_NATHAN):
+	Nathan: How many apples have you gathered?
+	# This could be made easier by making a shortcut in Globals.gd, but for now it can work
+	# Using inventory.get_item_count(Pandora.get_entity(RandomItems.APPLE)) works too, but this
+	# way we're sure we're getting the internal count of the quest.
+	Coco: {{Pandora.get_entity(PandoraQuests.HELP_NATHAN).get_quest().get_quest_step(0).gathered}}
+	if Pandora.get_entity(PandoraQuests.HELP_NATHAN).get_quest().get_quest_step(0).completed:
+		Give the apples to nathan?
+		- Yes
+			do inventory.remove_multiple(Pandora.get_entity(RandomItems.APPLE), 5)
+			do item_delivered.emit(Pandora.get_entity(RandomItems.APPLE), PandoraHumans.NATHAN)
+			do complete_quest(PandoraQuests.HELP_NATHAN)
+			Nathan: Thank you!
+		- No
+			=> END
+elif is_quest_completed(PandoraQuests.HELP_NATHAN):
+	Nathan: Thanks for the apples!
+	Nathan: Check out [color=pink][url=https://github.com/nathanhoad/godot_dialogue_manager]Dialogue Manager[/url][/color] for Godot.
+else:
+	Nathan: I sure wish I had some apples.
+	Help Nathan?
+	- Yes
+		do start_quest(PandoraQuests.HELP_NATHAN)
+	- No
+		=> END
+=> END
+
+
+~ pick_apple
+
+Coco: It's an apple tree.
+if is_quest_active(PandoraQuests.HELP_NATHAN) and inventory.get_item_count(Pandora.get_entity(RandomItems.APPLE)) < 5:
+	Coco: I'll just take one.
+	do inventory.add_item(Pandora.get_entity(RandomItems.APPLE), inventory.get_first_empty_index())
+=> END
+
+
+~ bitbrain
+
+if not is_quest_completed(PandoraQuests.HELP_NATHAN):
+	bitbrain: Nathan is looking for some help. Come back here later.
+	=> END
+
+bitbrain: Hey Coco, have you helped Nathan?
+Coco: Yup.
+bitbrain: Good!
+bitbrain: I'll tell you something about this demo:
+bitbrain: [color=pink]Dialogue Manager[/color] by Nathan is what allows for this dialogue to run.
+bitbrain: Check the [color=green]dialogue[/color] directory in your Godot Editor.
+bitbrain: [color=orange]QuestSystem[/color] by Shomy is what handles the quests in this project.
+bitbrain: Check out the [color=orange]quests[/color] directory in your Godot Editor.
+bitbrain: The approach in this project for quests is quite different compared to the basic example in the quest-system-example repository.
+bitbrain: Here, instead of extending [color=orange]Quest[/color] for each type of quest, we extended Quest to make a common handler for steps.
+bitbrain: To be more specific, [color=orange]BaseQuestResource[/color] has an Array of QuestSteps, which contains the actual logic to progress in a Quest.
+bitbrain: As you have might seen, the quest you've just completed needed you to gather some Apples.
+bitbrain: Those apples are declared as items inside of [color=yellow]Pandora[/color], an addon of mine for managing RPG data.
+bitbrain: The QuestSystem addon hooks up to Pandora, specifically for Items, this way it can access them in the editor (check out [color=green]"help_nathan.tres"[/color] in the [color=orange]quests[/color] directory)
+bitbrain: Then Pandora can also hook up with QuestSystem, in fact quest resources can be encapsulated inside of a Pandora Entity, useful if you want to use Pandora to manage every aspect of your Game.
+bitbrain: For Pandora related files, head to the following folders: [color=yellow]models, inventory, pandora[/color].
+bitbrain: Checkout [color=yellow]Pandora[/color] on GitHub.
+
+=> END

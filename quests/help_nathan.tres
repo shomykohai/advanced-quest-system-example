@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="BaseQuestResource" load_steps=10 format=3 uid="uid://h6kf5d0qqb4n"]
+
+[ext_resource type="Script" path="res://quests/scripts/base_quest.gd" id="1_0hwr7"]
+[ext_resource type="Script" path="res://inventory/item.gd" id="2_qw3yt"]
+[ext_resource type="Script" path="res://quests/scripts/steps/gather_item.gd" id="3_8d6r8"]
+[ext_resource type="Script" path="res://quests/scripts/steps/deliver_item.gd" id="4_infmb"]
+[ext_resource type="Script" path="res://models/humans.gd" id="5_vb441"]
+
+[sub_resource type="Resource" id="Resource_y1ixe"]
+script = ExtResource("2_qw3yt")
+_id = "6"
+
+[sub_resource type="Resource" id="Resource_dules"]
+script = ExtResource("3_8d6r8")
+item = SubResource("Resource_y1ixe")
+quantity = 5
+title = "Gather 5 apples for Nathan."
+completed = false
+
+[sub_resource type="Resource" id="Resource_ae0fe"]
+script = ExtResource("5_vb441")
+_id = "9"
+
+[sub_resource type="Resource" id="Resource_yo70p"]
+script = ExtResource("4_infmb")
+item = SubResource("Resource_y1ixe")
+to = SubResource("Resource_ae0fe")
+quantity = 5
+title = ""
+completed = false
+
+[resource]
+script = ExtResource("1_0hwr7")
+steps = Array[Resource("res://quests/scripts/quest_step.gd")]([SubResource("Resource_dules"), SubResource("Resource_yo70p")])
+rewards = Array[ExtResource("2_qw3yt")]([])
+id = 0
+quest_name = "Help Nathan"
+quest_description = "Nathan wants is looking for some apples.	"
+quest_objective = "Find and give Nathan some apples."

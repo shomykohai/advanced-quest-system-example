@@ -1,0 +1,331 @@
+{
+	"_entity_data": {
+		"_categories": [
+			{
+				"_category_id": "",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_icon_path": "res://inventory/icons/school-bag.svg",
+				"_id": "1",
+				"_ids_generation_class": "PandoraItems",
+				"_index": 0,
+				"_name": "Items",
+				"_script_path": "res://inventory/item.gd"
+			},
+			{
+				"_category_id": "1",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_icon_path": "res://inventory/icons/switch-weapon.svg",
+				"_id": "3",
+				"_ids_generation_class": "Armory",
+				"_index": 0,
+				"_name": "Armory",
+				"_property_overrides": {
+					"Description": {
+						"type": "string",
+						"value": "Armor to protect the player."
+					},
+					"Maximum Stack Size": {
+						"type": "int",
+						"value": -10
+					}
+				}
+			},
+			{
+				"_category_id": "1",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_icon_path": "res://inventory/icons/toolbox.svg",
+				"_id": "4",
+				"_ids_generation_class": "Tools",
+				"_index": 0,
+				"_name": "Tools",
+				"_property_overrides": {
+					"Description": {
+						"type": "string",
+						"value": "Tools and utilities."
+					},
+					"Maximum Stack Size": {
+						"type": "int",
+						"value": -10
+					}
+				}
+			},
+			{
+				"_category_id": "",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_id": "8",
+				"_ids_generation_class": "PandoraHumans",
+				"_index": 0,
+				"_name": "Humans",
+				"_script_path": "res://models/humans.gd"
+			},
+			{
+				"_category_id": "1",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_icon_path": "res://inventory/icons/peaks.svg",
+				"_id": "13",
+				"_ids_generation_class": "Ores",
+				"_index": 0,
+				"_name": "Ores",
+				"_property_overrides": {
+					"Description": {
+						"type": "string",
+						"value": "Ores that can be mined."
+					},
+					"Maximum Stack Size": {
+						"type": "int",
+						"value": 99
+					}
+				}
+			},
+			{
+				"_category_id": "",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_icon_path": "res://inventory/icons/stars-stack.svg",
+				"_id": "16",
+				"_ids_generation_class": "Rarities",
+				"_index": 0,
+				"_name": "Rarity",
+				"_script_path": "res://inventory/rarity.gd"
+			},
+			{
+				"_category_id": "",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_icon_path": "res://addons/quest_system/assets/quest_resource.svg",
+				"_id": "27",
+				"_ids_generation_class": "PandoraQuests",
+				"_index": 0,
+				"_name": "Quests",
+				"_script_path": "res://models/quests.gd"
+			},
+			{
+				"_category_id": "1",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_id": "5",
+				"_ids_generation_class": "RandomItems",
+				"_index": 0,
+				"_name": "Random",
+				"_property_overrides": {
+					"Maximum Stack Size": {
+						"type": "int",
+						"value": -10
+					}
+				}
+			}
+		],
+		"_entities": [
+			{
+				"_category_id": "3",
+				"_icon_color": "ffffff00",
+				"_icon_path": "res://inventory/icons/switch-weapon.svg",
+				"_id": "49",
+				"_index": 1,
+				"_name": "Shield",
+				"_property_overrides": {
+					"Maximum Stack Size": {
+						"type": "int",
+						"value": -10
+					},
+					"Name": {
+						"type": "string",
+						"value": "Shield"
+					},
+					"Rarity": {
+						"type": "reference",
+						"value": {
+							"_entity_id": "51",
+							"_type": 0
+						}
+					}
+				}
+			},
+			{
+				"_category_id": "13",
+				"_icon_color": "ffffff00",
+				"_id": "50",
+				"_index": 0,
+				"_name": "Copper Ore",
+				"_property_overrides": {
+					"Rarity": {
+						"type": "reference",
+						"value": {
+							"_entity_id": "51",
+							"_type": 0
+						}
+					}
+				}
+			},
+			{
+				"_category_id": "16",
+				"_icon_color": "ffffff00",
+				"_id": "51",
+				"_index": 0,
+				"_name": "Legendary"
+			},
+			{
+				"_category_id": "5",
+				"_icon_color": "b23b3bff",
+				"_icon_path": "res://inventory/icons/apple.svg",
+				"_id": "6",
+				"_index": 0,
+				"_name": "Apple",
+				"_property_overrides": {
+					"Description": {
+						"type": "string",
+						"value": "An Apple"
+					},
+					"Item Color": {
+						"type": "color",
+						"value": "992020ff"
+					},
+					"Maximum Stack Size": {
+						"type": "int",
+						"value": -10
+					}
+				}
+			},
+			{
+				"_category_id": "27",
+				"_icon_color": "ffffff00",
+				"_id": "7",
+				"_index": 0,
+				"_name": "Help Nathan",
+				"_property_overrides": {
+					"Quest Resource": {
+						"type": "resource",
+						"value": "res://quests/help_nathan.tres"
+					}
+				}
+			},
+			{
+				"_category_id": "8",
+				"_icon_color": "ffffff00",
+				"_icon_path": "res://characters/nathan/nathan.png",
+				"_id": "9",
+				"_index": 0,
+				"_name": "Nathan",
+				"_property_overrides": {
+					"Name": {
+						"type": "string",
+						"value": "Nathan"
+					}
+				}
+			},
+			{
+				"_category_id": "8",
+				"_icon_color": "ffffff00",
+				"_icon_path": "res://characters/bitbrain/bitbrain.png",
+				"_id": "11",
+				"_index": 0,
+				"_name": "Bitbrain",
+				"_property_overrides": {
+					"Name": {
+						"type": "string",
+						"value": "bitbrain"
+					}
+				}
+			}
+		],
+		"_properties": [
+			{
+				"_category_id": "3",
+				"_default_value": 10,
+				"_id": "11",
+				"_name": "Defense",
+				"_type": "int"
+			},
+			{
+				"_category_id": "1",
+				"_default_value": "Item Description",
+				"_id": "12",
+				"_name": "Description",
+				"_type": "string"
+			},
+			{
+				"_category_id": "1",
+				"_default_value": "ffffffff",
+				"_id": "15",
+				"_name": "Item Color",
+				"_type": "color"
+			},
+			{
+				"_category_id": "16",
+				"_default_value": "ffffffff",
+				"_id": "21",
+				"_name": "Rarity Color",
+				"_type": "color"
+			},
+			{
+				"_category_id": "16",
+				"_default_value": "Item rarity.",
+				"_id": "22",
+				"_name": "Rarity Description",
+				"_type": "string"
+			},
+			{
+				"_category_id": "1",
+				"_default_value": {
+					"_entity_id": "20",
+					"_type": 0
+				},
+				"_id": "23",
+				"_name": "Rarity",
+				"_setting_overrides": {
+					"Category Filter": "16"
+				},
+				"_type": "reference"
+			},
+			{
+				"_category_id": "13",
+				"_default_value": 0.1,
+				"_id": "24",
+				"_name": "Spawn Rate",
+				"_type": "float"
+			},
+			{
+				"_category_id": "1",
+				"_default_value": -10,
+				"_id": "35",
+				"_name": "Maximum Stack Size",
+				"_setting_overrides": {
+					"Max Value": 10,
+					"Min Value": -10
+				},
+				"_type": "int"
+			},
+			{
+				"_category_id": "1",
+				"_default_value": 1,
+				"_id": "36",
+				"_name": "Current Stack Size",
+				"_type": "int"
+			},
+			{
+				"_category_id": "27",
+				"_default_value": null,
+				"_id": "1",
+				"_name": "Quest Resource",
+				"_type": "resource"
+			},
+			{
+				"_category_id": "8",
+				"_default_value": "",
+				"_id": "10",
+				"_name": "Name",
+				"_type": "string"
+			}
+		]
+	},
+	"_id_generator": {
+		"_ids_by_context": {
+			"default": 11
+		}
+	}
+}

@@ -1,0 +1,67 @@
+class_name Inventory extends Node
+
+
+signal item_added(item:Item, index:int)
+signal item_removed(item:Item, index:int)
+
+
+# id -> ItemInstance
+var _slots = {}
+
+
+func add_item(item:Item, index:int) -> void:
+	if index == -1:
+		return
+	if not _slots.has(index):
+		_slots[index] = item
+		item_added.emit(item, index)
+	else:
+		var existing_item = _slots[index] as Item
+		if not existing_item.has_same_entity(item):
+			print("Unable to add item! Slot ", index, " already occupied.")
+			return
+		var new_stacksize = existing_item.get_current_stacksize() + item.get_current_stacksize()
+		if new_stacksize > existing_item.get_maximum_stacksize():
+			print("Unable to add item! Too many items.")
+			return
+		existing_item.set_current_stacksize(new_stacksize)
+		item_added.emit(existing_item, index)
+
+
+func remove_item(index:int) -> Item:
+	if _slots.has(index):
+		var item = _slots[index]
+		_slots.erase(index)
+		item_removed.emit(item, index)
+		return item
+	print("No item to remove at index ", index)
+	return null
+
+
+func remove_multiple(item: Item, count: int) -> void:
+	print(_slots)
+	for slot in _slots.keys():
+		if _slots[slot]._id == item._id:
+			remove_item(slot)
+
+func get_item_count(item: Item) -> int:
+	var count := 0
+	for slot in _slots:
+		if _slots[slot]._id == item._id:
+			count+=1
+	return count
+
+func has_item(item: Item) -> bool:
+	return item in _slots.values()
+
+func get_first_empty_index() -> int:
+	var already_used_slots = _slots.keys()
+	# Hardcoded slots number.
+	# In a normal scenario, you'd want an exported variable that
+	# declares how many slots are available, and make your UI
+	# adjust to this number.
+	for counter in range(9):
+		if not counter in already_used_slots:
+			return counter
+		counter+=1
+	return -1
