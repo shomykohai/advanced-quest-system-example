@@ -21,7 +21,7 @@ The code related to quests is stored in [the quest directory](/quests/)
 
 The dialogues are stored under [dialogue](/dialogue/).<br>
 
-The code for the balloon comes from [one](https://github.com/nathanhoad/godot_dialogue_manager/tree/main/examples/portraits_balloon) of @nathanhoad examples.<br>
+The code for the balloon comes from [one](https://github.com/nathanhoad/godot_dialogue_manager/tree/main/examples/portraits_balloon) of [@nathanhoad](https://github.com/nathanhoad) examples.<br>
 In this example, [globals.gd](/globals.gd) is set as a shortcut in Dialogue Manager settings.
 
 ### Items & Data
@@ -38,16 +38,16 @@ This project is under the MIT License, see `LICENSE` for more information.<br>
 
 This project include third parties addons, assets and code:<br>
 Code & addons:
-* [Pandora](https://github.com/bitbrain/pandora), by @bitbrain, under the [MIT License](/addons/pandora/LICENSE)
-* [QuestSystem](https://github.com/shomykohai/quest-system), by @shomykohai, under the [MIT License](/addons/quest_system/LICENSE)
-* [Dialogue Manager](https://github.com/nathanhoad/godot_dialogue_manager), by @nathanhoad, under the [MIT License](/addons/dialogue_manager/LICENSE)
-* [Inventory code](/inventory/), by @bitbrain, from Pandora repository, also under MIT License
+* [Pandora](https://github.com/bitbrain/pandora), by [@bitbrain](https://github.com/bitbrain), under the [MIT License](/addons/pandora/LICENSE)
+* [QuestSystem](https://github.com/shomykohai/quest-system), by [@shomykohai](https://github.com/shomykohai), under the [MIT License](/addons/quest_system/LICENSE)
+* [Dialogue Manager](https://github.com/nathanhoad/godot_dialogue_manager), by [@nathanhoad](https://github.com/nathanhoad), under the [MIT License](/addons/dialogue_manager/LICENSE)
+* [Inventory code](/inventory/), by [@bitbrain](https://github.com/bitbrain), from Pandora repository, also under MIT License
 
 Assets:
-* "Nathan" portrait is property of @nathanhoad<br>
-* "bitbrain" portrait is property of @bitbrain<br>
-* "Coco" portrait is property of @nathanhoad and @littlenebula (in particular this is a screenshot from this [video](https://www.youtube.com/watch?v=ixWkc2rKJEQ&t=1s))<br>
-* All items assets under the [inventory](/inventory/) directory, apart from [apple.svg](/inventory/icons/apple.svg) are property of @bitbrain
+* "Nathan" portrait is property of [@nathanhoad](https://github.com/nathanhoad)<br>
+* "bitbrain" portrait is property of [@bitbrain](https://github.com/bitbrain)<br>
+* "Coco" portrait is property of [@nathanhoad](https://github.com/nathanhoad) and [@littlenebula](https://github.com/littlenebula) (in particular this is a screenshot from this [video](https://www.youtube.com/watch?v=ixWkc2rKJEQ&t=1s))<br>
+* All items assets under the [inventory](/inventory/) directory, apart from [apple.svg](/inventory/icons/apple.svg) are property of [@nathanhoad](https://github.com/nathanhoad)
 
 Logos:
-* Pandora and Dialogue Manager logos by @nathanhoad
+* Pandora and Dialogue Manager logos by [@nathanhoad](https://github.com/nathanhoad)
