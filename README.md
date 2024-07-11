@@ -47,7 +47,7 @@ Assets:
 * "Nathan" portrait is property of [@nathanhoad](https://github.com/nathanhoad)<br>
 * "bitbrain" portrait is property of [@bitbrain](https://github.com/bitbrain)<br>
 * "Coco" portrait is property of [@nathanhoad](https://github.com/nathanhoad) and [@littlenebula](https://github.com/littlenebula) (in particular this is a screenshot from this [video](https://www.youtube.com/watch?v=ixWkc2rKJEQ&t=1s))<br>
-* All items assets under the [inventory](/inventory/) directory, apart from [apple.svg](/inventory/icons/apple.svg) are property of [@nathanhoad](https://github.com/nathanhoad)
+* All items assets under the [inventory](/inventory/) directory, apart from [apple.svg](/inventory/icons/apple.svg) are property of [@bitbrain](https://github.com/bitbrain)
 
 Logos:
 * Pandora and Dialogue Manager logos by [@nathanhoad](https://github.com/nathanhoad)
