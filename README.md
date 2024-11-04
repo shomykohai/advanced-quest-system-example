@@ -3,9 +3,11 @@
 Advanced guide to dialogue and quests in Godot 4
 </h1>
 
-This project is based on Nathan's [beginner dialogue tutorial](https://github.com/nathanhoad/beginner_godot4_dialogue).
+**This project is based on Nathan's [beginner dialogue tutorial](https://github.com/nathanhoad/beginner_godot4_dialogue).**
 
 In this example project, a more advanced use of [QuestSystem](https://github.com/shomykohai/quest-system) is shown. Particularly, it is used in combo with Nathan's [Dialogue Manager](https://github.com/nathanhoad/godot_dialogue_manager) and bitbrain's [Pandora](https://github.com/bitbrain/pandora).
+
+<image src="docs/screen.png">
 
 ## Useful informations
 
